@@ -1,1 +1,18 @@
-render
+services:
+  - type: web
+    name: n8n
+    env: docker
+    dockerImage: docker.n8n.io/n8nio/n8n
+    envVars:
+      - key: N8N_ENCRYPTION_KEY
+        generateValue: true
+      - key: DATABASE_URL
+        value: postgresql://neondb_owner:npg_um0IUba3jqRY@ep-little-river-atqdvwj7-pooler.c-9.us-east-1.aws.neon.tech/neondb?sslmode=require
+      - key: DB_TYPE
+        value: postgresdb
+      - key: WEBHOOK_URL
+        value: https://n8n-7zne.onrender.com
+      - key: N8N_HOST
+        value: n8n-7zne.onrender.com
+      - key: N8N_PROTOCOL
+        value: https
