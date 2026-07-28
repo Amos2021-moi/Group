@@ -1,10 +1,10 @@
 services:
   - type: web
     name: n8n-automation
-    runtime: docker
-    repo: https://github.com/n8n-io/n8n
+    runtime: image
+    image:
+      url: docker.n8n.io/n8nio/n8n
     plan: free
-    dockerCommand: docker.n8n.io/n8nio/n8n
     envVars:
       - key: N8N_ENCRYPTION_KEY
         generateValue: true
