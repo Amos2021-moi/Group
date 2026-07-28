@@ -1,8 +1,9 @@
 services:
   - type: web
-    name: n8n
-    env: docker
-    dockerImage: docker.n8n.io/n8nio/n8n
+    name: n8n-automation
+    runtime: image
+    repo: https://github.com/n8n-io/n8n
+    plan: free
     envVars:
       - key: N8N_ENCRYPTION_KEY
         generateValue: true
